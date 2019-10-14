@@ -33,7 +33,7 @@ int main(int argc, char** argv)
 {
    //--------------------------- PARSE COMMAND LINE -------------------------
     unsigned seed = (unsigned) time(NULL);
-    size_t sizeArray = 10;
+    size_t sizeArray = 20;
     bool useBlocks = false;
     size_t sizeBlocks = 5;
     int argi = 1; // Ideally this should be a size_t (historical reasons)
@@ -81,14 +81,14 @@ int main(int argc, char** argv)
 
     if (sizeArray < sizeBlocks) {
         sizeArray = sizeBlocks;
-    } 
+    }
 
     srand(seed);//Use an integer seed to get a fix sequence
 
     printf("Size of the array: %d\n", (int) sizeArray);
     int* array;
 
-    if (useBlocks) 
+    if (useBlocks)
         array = createRandomBlockArray(sizeArray, sizeBlocks);
     else
         array = createRandomArray(sizeArray);
