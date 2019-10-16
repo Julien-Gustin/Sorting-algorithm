@@ -52,7 +52,6 @@ static void Merge(int* array, int p, int q, size_t length){
 void sort(int* array, size_t length){
 
   int i = -1; // changer en size t
-  int j = 0;
 
   for(size_t j = 0; j < length; j++){
       while(array[j] < array[j+1] && j < length-1)

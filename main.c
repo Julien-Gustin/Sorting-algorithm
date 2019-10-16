@@ -33,7 +33,7 @@ int main(int argc, char** argv)
 {
    //--------------------------- PARSE COMMAND LINE -------------------------
     unsigned seed = (unsigned) time(NULL);
-    size_t sizeArray = 10000;
+    size_t sizeArray = 10;
     bool useBlocks = false;
     size_t sizeBlocks = 5;
     int argi = 1; // Ideally this should be a size_t (historical reasons)
@@ -87,6 +87,9 @@ int main(int argc, char** argv)
 
     printf("Size of the array: %d\n", (int) sizeArray);
     int* array;
+    float sommeSec = 0;//
+    for(int i = 0; i < 20; i++){//
+
 
     if (useBlocks)
         array = createRandomBlockArray(sizeArray, sizeBlocks);
@@ -95,6 +98,10 @@ int main(int argc, char** argv)
 
     const double sec = cpuTimeUsedToSort(array, sizeArray);
     printf("CPU Time: %f\n", sec);
+    sommeSec += sec; //
+  }
+
+  printf("\n moyenne : %f", sommeSec/20);//
 
     free(array);
 
