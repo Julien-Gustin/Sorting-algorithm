@@ -58,7 +58,7 @@ void sort(int* array, size_t length){
 
   printf("\n");
 
-  int i = 0;
+  int i = 0; // changer en size t
 
   while(array[i] < array[i+1])
     i++;
