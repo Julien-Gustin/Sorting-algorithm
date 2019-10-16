@@ -9,10 +9,8 @@
 #include <limits.h>
 #include "Sort.h"
 
-static void Merge(int* array, int p, int q, size_t length);
-
 static void Merge(int* array, int p, int q, size_t length){
-  int n1 = q - p +1;
+  int n1 = q - p + 1;
   int n2 = length - q;
   int *L = malloc(sizeof(int) *(n1+1));
   if(L == NULL)
@@ -26,7 +24,7 @@ static void Merge(int* array, int p, int q, size_t length){
     L[i] = array[p+i];
 
   for(int j = 0; j < n2; j++)
-    R[j] = array[q + j+1];
+    R[j] = array[q+j+1];
 
   L[n1] = INT_MAX;
   R[n2] = INT_MAX;
@@ -53,30 +51,22 @@ static void Merge(int* array, int p, int q, size_t length){
 
 void sort(int* array, size_t length){
 
-  for(unsigned long i = 0; i < length; i++)
-    printf("[%d]", array[i]);
+  int i = -1; // changer en size t
+  int j = 0;
 
-  printf("\n");
-
-  int i = 0; // changer en size t
-
-  while(array[i] < array[i+1])
-    i++;
-
-  int j=0;
-
-  while(j < length-1){
-      j = i+1;
-
-      while(array[j] < array[j+1])
+  for(size_t j = 0; j < length; j++){
+      while(array[j] < array[j+1] && j < length-1)
         j++;
 
-      Merge(array, 0, i, j);
+      if(i >= 0) // pour ne pas trier au premier passage
+        Merge(array, 0, i, j);
 
       i = j;
   }
+  for(size_t i = 0; i < length-1; i++){
+    if(array[i] > array[i+1])
+      printf("ERREUR %d", i);
 
-  for(unsigned long i = 0; i < length; i++)
-    printf("[%d]", array[i]);
+}
 
-  }
+}

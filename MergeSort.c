@@ -13,7 +13,7 @@ static void MergeSort(int* array, unsigned long p, size_t length);
 static void Merge(int* array, int p, int q, size_t length);
 
 static void Merge(int* array, int p, int q, size_t length){
-  int n1 = q - p +1;
+  int n1 = q - p + 1;
   int n2 = length - q;
   int *L = malloc(sizeof(int) *(n1+1));
   if(L == NULL)
@@ -27,7 +27,7 @@ static void Merge(int* array, int p, int q, size_t length){
     L[i] = array[p+i];
 
   for(int j = 0; j < n2; j++)
-    R[j] = array[q + j+1];
+    R[j] = array[q+j+1];
 
   L[n1] = INT_MAX;
   R[n2] = INT_MAX;
@@ -71,6 +71,12 @@ void sort(int* array, size_t length){
   MergeSort(array, 0, length-1);
 
   for(unsigned long i = 0; i < length; i++)
-    printf("[%d]", array[i]);
+    printf("%d:[%d]", i, array[i]);
+
+    for(size_t i = 0; i < length-1; i++){
+      if(array[i] > array[i+1])
+        printf("ERREUR %d", i);
+
+  }
 
   }

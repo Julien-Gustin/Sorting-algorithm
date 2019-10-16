@@ -4,6 +4,7 @@
  * ========================================================================= */
 
 #include <stddef.h>
+#include <stdio.h>
 #include "Sort.h"
 
 
@@ -11,6 +12,9 @@ void sort(int* array, size_t length)
 {
     if (!array)
         return;
+
+  for(unsigned long i = 0; i < length; i++)
+    printf("[%d]", array[i]);
 
     int j;
     int tmp;
@@ -25,4 +29,6 @@ void sort(int* array, size_t length)
         }
         array[j]=tmp;
     }
+    for(unsigned long i = 0; i < length; i++)
+      printf("[%d]", array[i]);
 }

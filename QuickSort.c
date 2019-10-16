@@ -55,6 +55,12 @@ void sort(int* array, size_t length){
   QuickSort(array, 0, length-1);
 
   for(unsigned long i = 0; i < length; i++)
-    printf("[%d]", array[i]);
+    printf("%d:[%d]", i, array[i]);
+
+    for(size_t i = 0; i <length-1; i++){
+      if(array[i] > array[i+1])
+        printf("ERREUR %d", i);
+
+  }
 
   }
