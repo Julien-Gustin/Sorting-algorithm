@@ -96,7 +96,24 @@ int main(int argc, char** argv)
     else
         array = createRandomArray(sizeArray);
 
+    //TO erase on vérifie graphiquement
+    const unsigned int N = sizeArray;
+    printf("\n[ ");
+
+    for(unsigned int i = 0; i < N; i++)
+      printf("%u  ", array[i]);
+
+    printf("]\n");
+
     const double sec = cpuTimeUsedToSort(array, sizeArray);
+    //TO erase on vérifie graphiquement
+    printf("\nTrié  [ ");
+
+    for(unsigned int i = 0; i < N; i++)
+      printf("%u  ", array[i]);
+
+    printf("]\n");
+
     printf("CPU Time: %f\n", sec);
     sommeSec += sec; //
   }
