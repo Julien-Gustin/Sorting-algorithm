@@ -1,6 +1,6 @@
 /* ========================================================================= *
  * QuickSort
- * Implementation of the MergeSort algorithm.
+ * Implementation of the QuickSort algorithm.
  * ========================================================================= */
 
 #include <stddef.h>
