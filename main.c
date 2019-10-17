@@ -33,7 +33,7 @@ int main(int argc, char** argv)
 {
    //--------------------------- PARSE COMMAND LINE -------------------------
     unsigned seed = (unsigned) time(NULL);
-    size_t sizeArray = 10;
+    size_t sizeArray = 100;
     bool useBlocks = false;
     size_t sizeBlocks = 5;
     int argi = 1; // Ideally this should be a size_t (historical reasons)
