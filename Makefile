@@ -13,8 +13,8 @@ LD=gcc
 
 # Files
 EXEC_TRI=main
-MODULES_TRI=main.c Array.c NewSort.c
-OBJECTS_TRI=main.o Array.o NewSort.c
+MODULES_TRI=main.c Array.c MergeSort.c
+OBJECTS_TRI=main.o Array.o MergeSort.c
 
 
 EXEC_ALL=main
@@ -32,8 +32,8 @@ main.o: main.c
 Array.o: Array.c
 	$(CC) -c Array.c -o Array.o $(CFLAGS)
 
-NewSort.o: NewSort.c
-	$(CC) -c NewSort.c -o NewSort.o $(CFLAGS)
+MergeSort.o: MergeSort.c
+	$(CC) -c MergeSort.c -o MergeSort.o $(CFLAGS)
 
 
 clean:
