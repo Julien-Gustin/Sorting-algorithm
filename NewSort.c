@@ -51,21 +51,16 @@ static void Merge(int* array, int p, int q, size_t length){
 
 void sort(int* array, size_t length){
 
-  int i = -1; // changer en size t
+  size_t i = 0; // changer en size t
 
-  for(size_t j = 0; j < length; j++){
+  for(size_t j = 1; j < length; j++){
       while(array[j] < array[j+1] && j < length-1)
         j++;
 
-      if(i >= 0) // pour ne pas trier au premier passage
         Merge(array, 0, i, j);
 
       i = j;
   }
-  for(size_t i = 0; i < length-1; i++){
-    if(array[i] > array[i+1])
-      printf("ERREUR %d", i);
 
-}
 
 }

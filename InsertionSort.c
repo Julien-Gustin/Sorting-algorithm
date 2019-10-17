@@ -13,7 +13,7 @@ void sort(int* array, size_t length)
     if (!array)
         return;
 
-    int j;
+    size_t j;
     int tmp;
     for (size_t i = 0; i < length; i++)
     {
@@ -26,7 +26,5 @@ void sort(int* array, size_t length)
         }
         array[j]=tmp;
     }
-
-    printf("\n");
 
 }
