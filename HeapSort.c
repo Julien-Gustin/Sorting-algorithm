@@ -67,10 +67,7 @@ static void HeapSort(int *array, size_t length){
   }
 }
 
-
-
 void sort(int* array, size_t length){
 
   HeapSort(array, length-1);
-
 }
