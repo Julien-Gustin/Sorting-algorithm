@@ -87,24 +87,14 @@ int main(int argc, char** argv)
 
     printf("Size of the array: %d\n", (int) sizeArray);
     int* array;
-    float sommeSec = 0;//
-    for(int i = 0; i < 20; i++){//
-
 
     if (useBlocks)
         array = createRandomBlockArray(sizeArray, sizeBlocks);
     else
         array = createRandomArray(sizeArray);
 
-    //TO erase on vérifie graphiquement
-
     const double sec = cpuTimeUsedToSort(array, sizeArray);
-
     printf("CPU Time: %f\n", sec);
-    sommeSec += sec; //
-  }
-
-  printf("\n moyenne : %f", sommeSec/20);//
 
     free(array);
 
