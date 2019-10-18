@@ -93,20 +93,15 @@ int main(int argc, char** argv)
     else
         array = createRandomArray(sizeArray);
 
-<<<<<<< HEAD
     for(size_t i = 0; i < sizeArray; i++)
       printf("[%d]", array[i]);
 
-    const double sec = cpuTimeUsedToSort(array, sizeArray);
-    printf("\nCPU Time: %f\n\n", sec);
 
-    //fallait mettre le printf après cpuTimeUsedToSort...
+    const double sec = cpuTimeUsedToSort(array, sizeArray);
+    printf("CPU Time: %f\n\n", sec);
+
     for(size_t i = 0; i < sizeArray; i++)
       printf("[%d]", array[i]);
-=======
-    const double sec = cpuTimeUsedToSort(array, sizeArray);
-    printf("CPU Time: %f\n", sec);
->>>>>>> 400a1a70bf5ae7d72c93487bacfcb1304c94368a
 
     free(array);
 
