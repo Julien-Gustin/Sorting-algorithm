@@ -1,6 +1,6 @@
 /* ========================================================================= *
- * MergeSort
- * Implementation of the MergeSort algorithm.
+ * NewSort
+ * Implementation of the NewSort algorithm.
  * ========================================================================= */
 
 #include <stddef.h>
@@ -20,19 +20,19 @@ static void Merge(int* array, int p, int q, size_t length){
   if(R == NULL)
     return;
 
-  for(int i = 0; i < n1; i++)
+  for(size_t i = 0; i < n1; i++)
     L[i] = array[p+i];
 
-  for(int j = 0; j < n2; j++)
+  for(size_t j = 0; j < n2; j++)
     R[j] = array[q+j+1];
 
   L[n1] = INT_MAX;
   R[n2] = INT_MAX;
 
-  int i = 0;
-  int j = 0;
+  size_t i = 0;
+  size_t j = 0;
 
-  for(unsigned long k = p; k <= length; k++){
+  for(size_t k = p; k <= length; k++){
     if(L[i] <= R[j]){
       array[k] = L[i];
       i++;
@@ -51,13 +51,13 @@ static void Merge(int* array, int p, int q, size_t length){
 
 void sort(int* array, size_t length){
 
-  size_t i = 0; // changer en size t
+  size_t i = 0;
 
-  for(size_t j = 1; j < length; j++){
-      while(array[j] < array[j+1] && j < length-1)
+  for(size_t j = 1; j < length; j++){ // Parcours le tableau jusqu'à sa dernière case
+      while(array[j] <= array[j+1] && j < length-1) //l'indice j doit etre l'indice de la derniere case ou le tableau array[i+1..j] est trié par ordre croissant
         j++;
 
-        Merge(array, 0, i, j);
+      Merge(array, 0, i, j); // Trie 2 sous tableau déja trié, tel que array[0..i] est trié et array[i+1..j] est trié, et l'output de Merge renvois un tableau trié jusqu'à l'indice j ( array[0..j] )
 
       i = j;
   }

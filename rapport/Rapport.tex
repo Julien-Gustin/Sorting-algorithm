@@ -102,39 +102,59 @@
 
 	\section{Analyse théorique}
 	\subsection{invariant}
-	\newpage
 	
+	\noindent $\{P\} \gets$ "$A$ est un tableau de taille $\attrib{A}{length}"$\\
+	  $\{Q\} \gets$ "Le Tableau $A$ est trié"\\ \\
+	$\{I\} \gets$ le sous tableau 
+$A[1..i]$ contient les $i$ premiers éléments de $A$ triés, le sous tableau \indent $A[j..A.length]$ est la partie du tableau de $A$ n'est pas encore triée\\
+\\
+$\{I\}$  $\exists i,j,$ $1 \leq i < j \leq \attrib{A}{length},$  $A[1..i],$ $\forall k,$ $1 \leq k < i, A[k] \leq A[k+1]$ \\
+\indent Fonction de terminaison : $j \gets \gets \attrib{A}{length}$
+
 	\subsection{PseudoCode}
+	\label{PseudoCode}
 	
 	\begin{codebox}
 \Procname{$\proc{New-Sort}(A)$}
 \li $i \gets 1$
 \li \For $j \gets 2$ \To $\attrib{A}{length}$
 \Do
-\li \While $A[j] < A[j+1]$ and $j < \attrib{A}{length -1}$
+\li \While $A[j] \leq A[j+1]$ and $j < \attrib{A}{length}$
 \li \Do
 $j \gets j + 1$
 \End
 \li $\proc{Merge}(A, 1, i, j)$
-\End
+
 \li $i \gets j$
 \End
 \end{codebox}
 
 \subsection{Complexité}
-La complexité en temps dans le meilleur des cas est de $\Theta(n)$ et dans le pire des cas $\Theta(n^{2})$ 
+La complexité en temps dans le meilleur des cas est de $\Theta(n)$ ( si le tableau est pré-trié par ordre croissant ) et dans le pire des cas $\Theta(n^{2})$ ( si le tableau est pré-trié dans un ordre décroissant ) , où 'n' est la taille du tableau ( array )
+
+\includegraphics[scale=0.5]{graphique.png} \\
+( graphique testé avec des valeurs réels ) %l'image est réduite de moitié
 
 \newpage
 \subsection{Stabilité ?}
+Le tri est stable parce grace aux $A[j]\leq A[j+1]$ les valeurs égaux n'interchange pas de place, ainsi le tri gagne en rapidité.
+	\begin{codebox}
+
+\li \While $A[j] \leq A[j+1]$ and $j < \attrib{A}{length}$
+$\longrightarrow$ voir PseudoCode~\ref{PseudoCode}
+\End
+\end{codebox} 
 \newpage
 \subsection{Complexité au pire cas}
 \newpage
 
 \section{Analyse expérimentale}
 \subsection{Temps d'exécution sur des tabeaux aléatoires}
-\begin{table}[]
+
+\begin{table}[htb]
 \begin{tabular}{cccccc}
 \hline
+
 n   & InsertionSort & QuickSort & HeapSort & MergeSort & NewSort \\ \hline
 $10^{1}$ & 0,000015      & 0,000005  & 0,000006         & 0,000009          & 0,000005        \\
 $10^{2}$ & 0,000052      & 0,000035  & 0,000061         & 0,000054          & 0,000090        \\
