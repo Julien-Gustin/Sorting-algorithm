@@ -172,11 +172,32 @@ $10^{1}$ & 0,000015      & 0,000005  & 0,000006         & 0,000009          & 0,
 $10^{2}$ & 0,000052      & 0,000035  & 0,000061         & 0,000054          & 0,000090        \\
 $10^{3}$ & 0,001055      & 0,000225  & 0,000959         & 0,000297          & 0,001841        \\
 $10^{4}$ & 0,060314      & 0,003429  & 0,003847         & 0,002229          & 0,112815        \\
-$10^{5}$ & 7,216459      & 0.036962  & 0,032527         & 0,017463           & 14,224125        \\
-$10^{6}$ & 768,522644    & 3.239571  & 0,353273         & 0,179450          & 1529,154037
+$10^{5}$ & 7,216459      & 0.036962  & 0,032527         & 0,017463           & 10,771157        \\
+$10^{6}$ & 768,522644    & 2.639571  & 0,353273         & 0,179450          & 1429,154037
         
 \end{tabular}
 \end{table}
 
+L'\textbf{insertionSort} et le \textbf{newSort} sont les tris les plus lents des cinq en effet avec leurs complexité moyenne de $\Theta(n^{2})$ ces tris prennent un temps quadratique pour un tableau de taille 'n', cette complexité "élevé" découle du faite que contrairement aux QuickSort, MergeSort ou HeapSort ces tris requièrent (pour l'\textbf{insertionSort}) de parcourir le tableau plusieurs fois pour insérer une valeur à sa bonne place et pour le \textbf{MergeSort} trié deux sous tableau dont le premier commence de la premiere case jusqu'à la dernière précédemment trié, et le deuxième de la case qui suit le premier sous tableau jusqu'à la dernière case ou la suivante  n'est pas trié par ordre croissant, et ainsi la fusion de ces deux sous-tableaux pré-trié crée un tableau trié.
+ Parcourir plusieurs fois le tableau mène à une complexité de $\Theta(n^{2})$
+\\
+\\
+L'algorithme qui suit est de type "diviser pour régner" ( Découper le problème initial en sous problème, résoudre ces problèmes permettent de résoudre le problème initial ) sa complexité moyenne est $\Theta(n$ $log$ $n$) cependant au pire des cas est quadratique ce qui est la cause de sa "lenteur" comparé aux HeapSort et MergeSort, le \textbf{quickSort} procède par une méthode qui s'appelle de partition qui consiste à choisir un pivot que nous plaçons à la fin du sous tableau et les éléments inférieur à celui ci sont placé au début de ce sous tableau, ensuite ce pivot est placé à la fin des éléments déplacé, cette méthode permet de trié le tableau rapidement cependant si le tableau est déja trié en entrée ce tri n'est pas vraiment efficace.\\ 
+
+Les deux prochains algorithmes, \textbf{HeapSort} et \textbf{MergeSort} sont tout deux extrêmement rapide avec une complexité que ce soit dans le pire ou meilleur des cas de $\Theta(n$ $log$ $n$) soit de complexité asymptotiquement optimale, le \textbf{MergeSort} est de type " diviser pour régner", cet algorithme fonctionne par le principe que à partir de deux tableaux triés nous pouvons formé un tableau triés ainsi par récursivité nous créons des sous-tableaux de plus en plus petit jusqu'à ce que le tableau ne contienne qu'un seul élément et par la remonté récursive nous fusionnons ces tableaux qui deviennent de plus en plus grands à chaque remonté jusqu'à ce que le tableau soit complètement trié.\\ Le \textbf{HeapSort} fonctionne par arbre binaire.
+Ce qui crée la légère différence en temps entre ces deux tris est la stabilité en effet le HeapSort ne préserve pas nécessairement l’ordre des éléments à valeurs identique contrairement au MergeSort qui gagne ainsi en rapidité.
+
+\begin{table}[htb]
+\begin{tabular}{cccccc}
+\hline
+
+Cas   & InsertionSort & QuickSort & HeapSort & MergeSort & NewSort \\ \hline
+Meilleur & $\Theta(n)$      & $\Theta(n$ $log$ $n)$   & $\Theta(n$ $log$ $n)$        & $\Theta(n$ $log$ $n)$          & $\Theta(n)$        \\
+Pire & $\Theta(n^{2})$     & $\Theta(n^{2})$  & $\Theta(n$ $log$ $n)$         & $\Theta(n$ $log$ $n)$ & $\Theta(n^{2})$       \\
+Moyen & $\Theta(n^{2})$      & $\Theta(n$ $log$ $n)$  & $\Theta(n$ $log$ $n)$         & $\Theta(n$ $log$ $n)$         & $\Theta(n^{2})$        \\
+Stable & Oui      & Non  & Non         & Oui          & Oui        \\
+  
+\end{tabular}
+\end{table}
 
 \end{document}
