@@ -93,7 +93,6 @@ int main(int argc, char** argv)
     else
         array = createRandomArray(sizeArray);
 
-
     const double sec = cpuTimeUsedToSort(array, sizeArray);
     printf("\nCPU Time: %f\n\n", sec);
 
