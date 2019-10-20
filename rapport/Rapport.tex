@@ -7,11 +7,14 @@
 \usepackage{shortvrb}
 \usepackage{listings}
 \usepackage[fleqn]{amsmath}
+\frenchbsetup{StandardLists=true} % à inclure si on utilise \usepackage[french]{babel}
 \usepackage{amsfonts}
 \usepackage{fullpage}
 \usepackage{enumerate}
 \usepackage{graphicx}             % import, scale, and rotate graphics
 \usepackage{subfigure}            % group figures
+\usepackage{enumitem}
+\usepackage{amssymb}
 \usepackage{alltt}
 \usepackage{url}
 \usepackage{indentfirst}
@@ -102,14 +105,21 @@
 
 	\section{Analyse théorique}
 	\subsection{invariant}
-	
-	\noindent $\{P\} \gets$ "$A$ est un tableau de taille $\attrib{A}{length}"$\\
-	  $\{Q\} \gets$ "Le Tableau $A$ est trié"\\ \\
-	$\{I\} \gets$ le sous tableau 
-$A[1..i]$ contient les $i$ premiers éléments de $A$ triés, le sous tableau \indent $A[j..A.length]$ est la partie du tableau de $A$ n'est pas encore triée\\
+	\begin{itemize}[label=$\square$]
+
+\item
+
+	\noindent $\{P\} \gets$ "$A$ est un tableau d'entier de taille $\attrib{A}{length}"$\\
+	  $\{Q\} \gets$ "Le Tableau $A$ est trié"\\ 
+	$\{I\} \gets$ "Le sous tableau 
+$A[1..i]$ contient les $i$ premiers éléments de $A$ triés, le sous tableau \indent \indent $A[j..A.length]$ est la partie du tableau de $A$ n'est pas encore triée"\\
 \\
-$\{I\}$  $\exists i,j,$ $1 \leq i < j \leq \attrib{A}{length},$  $A[1..i],$ $\forall k,$ $1 \leq k < i, A[k] \leq A[k+1]$ \\
-\indent Fonction de terminaison : $j \gets \gets \attrib{A}{length}$
+\item $\{P\} i = 1$ $\&\&$ $j = 2 \{I\}$
+\\ $\{I\}$  $\exists i,j,$ $1 \leq i < j \leq \attrib{A}{length},$  $A[1..i],$ $\forall k,$ $1 \leq k < i, A[k] \leq A[k+1]$ \\
+\indent Fonction de terminaison : $f \gets \attrib{A}{length}-j +1$
+\\ $\{Q\} = \forall k,$ $1 \leq k < \attrib{A}{length},$ $A[k] \leq A[k+1]$ $\&\&$ $j=\attrib{A}{length}+1$
+
+\end{itemize}
 
 	\subsection{PseudoCode}
 	\label{PseudoCode}
@@ -117,8 +127,10 @@ $\{I\}$  $\exists i,j,$ $1 \leq i < j \leq \attrib{A}{length},$  $A[1..i],$ $\fo
 	\begin{codebox}
 \Procname{$\proc{New-Sort}(A)$}
 \li $i \gets 1$
+
 \li \For $j \gets 2$ \To $\attrib{A}{length}$
 \Do
+
 \li \While $A[j] \leq A[j+1]$ and $j < \attrib{A}{length}$
 \li \Do
 $j \gets j + 1$

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.3.23)  19 OCT 2019 20:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.3.23)  20 OCT 2019 10:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -230,6 +230,17 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfig@top=\skip53
 \subfig@bottom=\skip54
 )
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip55
+\enit@outerparindent=\dimen131
+\enit@toks=\toks26
+\enit@inbox=\box32
+\enitdp@description=\count122
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
 (/usr/share/texlive/texmf-dist/tex/latex/base/alltt.sty
 Package: alltt 1997/06/16 v2.0g defines alltt environment
 )
@@ -242,7 +253,7 @@ Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/eurosym/eurosym.sty
 Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
-\@eurobox=\box32
+\@eurobox=\box33
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
@@ -262,11 +273,11 @@ Package xcolor Info: Driver file: pdftex.def on input line 225.
 
 (/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2018/05/02 v1.0c Color table columns (DPC)
-\everycr=\toks26
-\minrowclearance=\skip55
+\everycr=\toks27
+\minrowclearance=\skip56
 )
 LaTeX Info: Redefining \color on input line 709.
-\rownum=\count122
+\rownum=\count123
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
@@ -281,11 +292,11 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen131
-\WF@size=\dimen132
-\c@WF@wrappedlines=\count123
-\WF@box=\box33
-\WF@everypar=\toks27
+\wrapoverhang=\dimen132
+\WF@size=\dimen133
+\c@WF@wrappedlines=\count124
+\WF@box=\box34
+\WF@everypar=\toks28
 Package: wrapfig 2003/01/31  v 3.6
 )
 (/usr/share/texlive/texmf-dist/tex/latex/minitoc/minitoc.sty
@@ -297,8 +308,8 @@ Package: mtcmess 2006/03/14
 Package minitoc Info: I0001
 (minitoc)             *** minitoc package, version 62 ***.
 \tf@mtc=\write3
-\mtcindent=\skip56
-\mtcskipamount=\skip57
+\mtcindent=\skip57
+\mtcskipamount=\skip58
 Package minitoc Info: I0005
 (minitoc)             compatible with hyperref.
 Package minitoc Info: I0023
@@ -307,9 +318,9 @@ Package minitoc Info: I0004
 (minitoc)             chapter level macros NOT available.
 Package minitoc Info: I0028
 (minitoc)             section level macros available.
-\mtc@toks=\toks28
-\mtc@strutbox=\box34
-\mtc@hstrutbox=\box35
+\mtc@toks=\toks29
+\mtc@strutbox=\box35
+\mtc@hstrutbox=\box36
 Package minitoc Info: I0002
 (minitoc)             Autoconfiguration of extensions.
 \openout3 = `Rapport.mtc0'.
@@ -326,12 +337,12 @@ Package minitoc Info: I0031
 
 \openout3 = `Rapport.mtc0'.
 
-\c@ptc=\count124
-\c@parttocdepth=\count125
-\ptcindent=\skip58
-\c@stc=\count126
-\c@secttocdepth=\count127
-\stcindent=\skip59
+\c@ptc=\count125
+\c@parttocdepth=\count126
+\ptcindent=\skip59
+\c@stc=\count127
+\c@secttocdepth=\count128
+\stcindent=\skip60
 Package minitoc Info: I0010
 (minitoc)             The english language is selected.
 (minitoc)              on input line 4910.
@@ -344,12 +355,12 @@ File: english.mld 2006/01/13
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/clrscode3e/clrscode3e.sty
 Package: clrscode3e 
-\c@codelinenumber=\count128
-\c@indent=\count129
-\digitwidth=\skip60
-\savecode=\box36
-\codeboxwidth=\skip61
-\c@thisindent=\count130
+\c@codelinenumber=\count129
+\c@indent=\count130
+\digitwidth=\skip61
+\savecode=\box37
+\codeboxwidth=\skip62
+\c@thisindent=\count131
 )
 (/usr/share/texlive/texmf-dist/tex/latex/sectsty/sectsty.sty
 Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
@@ -365,43 +376,43 @@ Package tocbibind Note: Using section or other style headings.
 ) (/usr/share/texlive/texmf-dist/tex/latex/tocloft/tocloft.sty
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
 Package tocloft Info: The document has section divisions on input line 51.
-\cftparskip=\skip62
-\cftbeforetoctitleskip=\skip63
-\cftaftertoctitleskip=\skip64
-\cftbeforepartskip=\skip65
-\cftpartnumwidth=\skip66
-\cftpartindent=\skip67
-\cftbeforesecskip=\skip68
-\cftsecindent=\skip69
-\cftsecnumwidth=\skip70
-\cftbeforesubsecskip=\skip71
-\cftsubsecindent=\skip72
-\cftsubsecnumwidth=\skip73
-\cftbeforesubsubsecskip=\skip74
-\cftsubsubsecindent=\skip75
-\cftsubsubsecnumwidth=\skip76
-\cftbeforeparaskip=\skip77
-\cftparaindent=\skip78
-\cftparanumwidth=\skip79
-\cftbeforesubparaskip=\skip80
-\cftsubparaindent=\skip81
-\cftsubparanumwidth=\skip82
-\cftbeforeloftitleskip=\skip83
-\cftafterloftitleskip=\skip84
-\cftbeforefigskip=\skip85
-\cftfigindent=\skip86
-\cftfignumwidth=\skip87
-\cftbeforelottitleskip=\skip88
-\cftafterlottitleskip=\skip89
-\cftbeforetabskip=\skip90
-\cfttabindent=\skip91
-\cfttabnumwidth=\skip92
-\cftbeforesubfigskip=\skip93
-\cftsubfigindent=\skip94
-\cftsubfignumwidth=\skip95
-\cftbeforesubtabskip=\skip96
-\cftsubtabindent=\skip97
-\cftsubtabnumwidth=\skip98
+\cftparskip=\skip63
+\cftbeforetoctitleskip=\skip64
+\cftaftertoctitleskip=\skip65
+\cftbeforepartskip=\skip66
+\cftpartnumwidth=\skip67
+\cftpartindent=\skip68
+\cftbeforesecskip=\skip69
+\cftsecindent=\skip70
+\cftsecnumwidth=\skip71
+\cftbeforesubsecskip=\skip72
+\cftsubsecindent=\skip73
+\cftsubsecnumwidth=\skip74
+\cftbeforesubsubsecskip=\skip75
+\cftsubsubsecindent=\skip76
+\cftsubsubsecnumwidth=\skip77
+\cftbeforeparaskip=\skip78
+\cftparaindent=\skip79
+\cftparanumwidth=\skip80
+\cftbeforesubparaskip=\skip81
+\cftsubparaindent=\skip82
+\cftsubparanumwidth=\skip83
+\cftbeforeloftitleskip=\skip84
+\cftafterloftitleskip=\skip85
+\cftbeforefigskip=\skip86
+\cftfigindent=\skip87
+\cftfignumwidth=\skip88
+\cftbeforelottitleskip=\skip89
+\cftafterlottitleskip=\skip90
+\cftbeforetabskip=\skip91
+\cfttabindent=\skip92
+\cfttabnumwidth=\skip93
+\cftbeforesubfigskip=\skip94
+\cftsubfigindent=\skip95
+\cftsubfignumwidth=\skip96
+\cftbeforesubtabskip=\skip97
+\cftsubtabindent=\skip98
+\cftsubtabnumwidth=\skip99
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
@@ -411,39 +422,36 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 ) (./Rapport.aux)
 \openout1 = `Rapport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Info: Redefining \degres on input line 93.
-LaTeX Info: Redefining \dots on input line 93.
-Package french.ldf Info: Setting StandardEnumerateEnv=true for
-(french.ldf)             compatibility with enumerate package,
-(french.ldf)             reported on input line 93.
-LaTeX Info: Redefining \up on input line 93.
-\c@lstlisting=\count131
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Info: Redefining \degres on input line 96.
+LaTeX Info: Redefining \dots on input line 96.
+LaTeX Info: Redefining \up on input line 96.
+\c@lstlisting=\count132
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count132
-\scratchdimen=\dimen133
-\scratchbox=\box37
-\nofMPsegments=\count133
-\nofMParguments=\count134
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count135
-\MPscratchDim=\dimen134
-\MPnumerator=\count136
-\makeMPintoPDFobject=\count137
-\everyMPtoPDFconversion=\toks30
+\scratchcounter=\count133
+\scratchdimen=\dimen134
+\scratchbox=\box38
+\nofMPsegments=\count134
+\nofMParguments=\count135
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count136
+\MPscratchDim=\dimen135
+\MPnumerator=\count137
+\makeMPintoPDFobject=\count138
+\everyMPtoPDFconversion=\toks31
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -495,12 +503,12 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@minilofdepth=\count138
-\c@minilotdepth=\count139
-\c@partlofdepth=\count140
-\c@partlotdepth=\count141
-\c@sectlofdepth=\count142
-\c@sectlotdepth=\count143
+\c@minilofdepth=\count139
+\c@minilotdepth=\count140
+\c@partlofdepth=\count141
+\c@partlotdepth=\count142
+\c@sectlofdepth=\count143
+\c@sectlotdepth=\count144
 Package minitoc(hints) Info: I0049
 (minitoc(hints))             ==> You requested the hints option. 
 (minitoc(hints))             Some hints are eventually given below.
@@ -523,18 +531,18 @@ Package minitoc(hints) Warning: W0039
 (minitoc(hints))                --- The \section command is altered 
 (minitoc(hints))                after minitoc.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 94.
+LaTeX Font Info:    Try loading font information for U+msa on input line 97.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 94.
+LaTeX Font Info:    Try loading font information for U+msb on input line 97.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 96.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 99.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
@@ -544,19 +552,19 @@ File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 106--113
+Underfull \hbox (badness 10000) in paragraph at lines 112--117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--113
+Underfull \hbox (badness 10000) in paragraph at lines 112--117
 
  []
 
 <graphique.png, id=14, 583.17876pt x 360.34625pt>
 File: graphique.png Graphic file (type png)
 <use graphique.png>
-Package pdftex.def Info: graphique.png  used on input line 135.
+Package pdftex.def Info: graphique.png  used on input line 147.
 (pdftex.def)             Requested size: 291.58867pt x 180.17268pt.
 [3 <./graphique.png>]
 Warning: Indentation ends at level -1 in codebox on page 4.
@@ -579,29 +587,30 @@ Package minitoc(hints) Warning: W0024
 
 [6] (./Rapport.aux) ) 
 Here is how much of TeX's memory you used:
- 8236 strings out of 492641
- 112364 string characters out of 6131787
- 231636 words of memory out of 5000000
- 11752 multiletter control sequences out of 15000+600000
+ 8717 strings out of 492641
+ 119006 string characters out of 6131787
+ 238804 words of memory out of 5000000
+ 12226 multiletter control sequences out of 15000+600000
  23597 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,11n,49p,287b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,11n,49p,290b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc
 }</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/type1/pu
-blic/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc10
-95.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1200.pfb></usr/share/t
-exmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/pub
-lic/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm172
-8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1200.pfb></usr/share/te
-xmf/fonts/type1/public/cm-super/sfss1440.pfb>
-Output written on Rapport.pdf (6 pages, 163593 bytes).
+dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf/fonts/type1/pub
+lic/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc109
+5.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1200.pfb></usr/share/te
+xmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/publ
+ic/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728
+.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1200.pfb></usr/share/tex
+mf/fonts/type1/public/cm-super/sfss1440.pfb>
+Output written on Rapport.pdf (6 pages, 171596 bytes).
 PDF statistics:
- 79 PDF objects out of 1000 (max. 8388607)
- 55 compressed objects within 1 object stream
+ 83 PDF objects out of 1000 (max. 8388607)
+ 58 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
