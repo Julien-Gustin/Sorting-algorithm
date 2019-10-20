@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.3.23)  20 OCT 2019 17:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.3.23)  20 OCT 2019 17:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -582,11 +582,11 @@ Package minitoc(hints) Warning: W0024
 
 [4] (./Rapport.aux) ) 
 Here is how much of TeX's memory you used:
- 8713 strings out of 492641
- 118972 string characters out of 6131787
+ 8715 strings out of 492641
+ 118997 string characters out of 6131787
  242804 words of memory out of 5000000
- 12225 multiletter control sequences out of 15000+600000
- 23597 words of font info for 58 fonts, out of 8000000 for 9000
+ 12226 multiletter control sequences out of 15000+600000
+ 24286 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,11n,49p,845b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc
@@ -601,11 +601,12 @@ lic/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc109
 xmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/publ
 ic/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728
 .pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1200.pfb></usr/share/tex
-mf/fonts/type1/public/cm-super/sfss1440.pfb>
-Output written on Rapport.pdf (4 pages, 180207 bytes).
+mf/fonts/type1/public/cm-super/sfss1440.pfb></usr/share/texmf/fonts/type1/publi
+c/cm-super/sfti1095.pfb>
+Output written on Rapport.pdf (4 pages, 194965 bytes).
 PDF statistics:
- 77 PDF objects out of 1000 (max. 8388607)
- 54 compressed objects within 1 object stream
+ 81 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
