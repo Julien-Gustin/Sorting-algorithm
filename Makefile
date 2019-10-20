@@ -13,8 +13,8 @@ LD=gcc
 
 # Files
 EXEC_TRI=main
-MODULES_TRI=main.c Array.c HeapSort.c
-OBJECTS_TRI=main.o Array.o HeapSort.c
+MODULES_TRI=main.c Array.c QuickSort.c
+OBJECTS_TRI=main.o Array.o QuickSort.c
 
 
 EXEC_ALL=main
@@ -32,8 +32,8 @@ main.o: main.c
 Array.o: Array.c
 	$(CC) -c Array.c -o Array.o $(CFLAGS)
 
-HeapSort.o: HeapSort.c
-	$(CC) -c HeapSort.c -o HeapSort.o $(CFLAGS)
+QuickSort.o: QuickSort.c
+	$(CC) -c QuickSort.c -o QuickSort.o $(CFLAGS)
 
 
 clean:
