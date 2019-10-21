@@ -87,6 +87,8 @@ int main(int argc, char** argv)
 
     printf("Size of the array: %d\n", (int) sizeArray);
     int* array;
+    double acctmp = 0;
+    for(int i = 0; i < 20; i++){
 
     if (useBlocks)
         array = createRandomBlockArray(sizeArray, sizeBlocks);
@@ -94,7 +96,11 @@ int main(int argc, char** argv)
         array = createRandomArray(sizeArray);
 
     const double sec = cpuTimeUsedToSort(array, sizeArray);
-    printf("\nCPU Time: %f\n\n", sec);
+    acctmp += sec;
+    printf("\nCPU Time: %f\n", sec);
+
+  }
+  printf("temps : %lf", acctmp/20);
 
     free(array);
 

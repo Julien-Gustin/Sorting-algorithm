@@ -147,14 +147,18 @@ La complexité en temps, dans le meilleur des cas, est $\Theta(n)$ ( si le table
 
 
 \subsection{Stabilité ?}
-Le tri est stable parce que, grâce aux $A[j]\leq A[j+1]$, les valeurs égales n'interchangent pas de place, vu que \textit{Merge} est lui aussi stable NewSort ne peut etre que stable, ainsi le tri gagne en rapidité.
-	\begin{codebox}
+\textbf{NewSort}
+ est un tri stable en effet, grâce a "\textit{$A[j]\leq A[j+1]$}"
+	\footnote{\begin{codebox}
+	
 
 \li \While $A[j] \leq A[j+1]$ and $j < \attrib{A}{length}$
 $\longrightarrow$ voir PseudoCode~\ref{PseudoCode}
 \End
-\end{codebox} 
-\newpage
+\end{codebox} }
+, les valeurs égales n'interchangent pas de place et sont considérée comme déjà triée, de plus la fonction utilisée "\textit{Merge}" étant aussi stable nous pouvons en conclure que \textbf{NewSort} est stable. 
+
+
 \subsection{Complexité au pire des cas}
 \newpage
 
@@ -197,5 +201,19 @@ Stable & Oui      & Non  & Non         & Oui          & Oui        \\
   
 \end{tabular}
 \end{table}
+(si intervalle de rapport plus élévé = plus rapide )
 
+\section{Temps d'exécution sur des tableaux de blocs pré-triés}
+\begin{table}[htb]
+\begin{tabular}{llllll}
+\hline
+k    & InsertionSort & QuickSort & HeapSort & MergeSort & NewSort \\ \hline
+1    & 0,066221              & 0,066969          & 0,065319         & 0,001146          & 0,000132        \\
+20   & 0,005462              & 0,005605          & 0,004157         & 0,001470          & 0,000974        \\
+100  & 0,002183              & 0,002485          & 0,002158         & 0,002002          & 0,002533        \\
+500  & 0,001761              & 0,001638          & 0,001644         & 0,001810          & 0,006723        \\
+1000 & 0,001476              & 0,001626          & 0,000947         & 0,001876          & 0,013732        \\
+5000 & 0,048251              & 0,047346          & 0,047010         & 0,001124          & 0,058827       
+\end{tabular}
+\end{table}
 \end{document}
