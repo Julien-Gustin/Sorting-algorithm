@@ -73,7 +73,6 @@ static void Merge(int* array, size_t p, size_t q, size_t length){
 }
 
 static void NewSort(int* array, size_t length){
-
   size_t i = 0;
 
   for(size_t j = 1; j < length; j++){ // Se déplace dans le tableau jusqu'à la dernière case
@@ -81,7 +80,6 @@ static void NewSort(int* array, size_t length){
         j++;
 
       Merge(array, 0, i, j); // Fusionne 2 sous tableau déja trié pour que la fusion des deux soit lui aussi triée
-
       i = j;
   }
 }
