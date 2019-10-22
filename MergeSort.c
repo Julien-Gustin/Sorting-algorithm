@@ -1,6 +1,6 @@
 /* ========================================================================= *
  * MergeSort
- * Implementation of the MergeSort algorithm.
+ * Implémentation de l'algorithme MergeSort.
  * ========================================================================= */
 
 #include <stddef.h>
@@ -10,55 +10,55 @@
 #include "Sort.h"
 
 /* ------------------------------------------------------------------------- *
- * Create a sorted array of integers (from 0 to length-1).
+ * Trie un tableau d'entier.
  *
- * PARAMETERS
- * array        The array to sort
- * p            Is the indice of the first element of the array
- * length       Number of elements in the array (pre-condition: 0 <= length)
+ * PARAMETRES
+ * array        Le tableau à trier
+ * p            l'indice du premier élément du tableau
+ * length       Nombres d'éléments du tableau ( length >= 0 )
  * ------------------------------------------------------------------------- */
 static void MergeSort(int* array, size_t p, size_t length);
 
 /* ------------------------------------------------------------------------- *
- * Merge two under array in one array array[p..length]
+ * Fusionne deux sous tableau en un meme tableau array[p..length]
  *
- * array[p..q] and array[q+1..length] are sort
+ * array[p..q] et array[q+1..length] sont triée
  *
- * PARAMETERS
- * array        The array to sort
+ * PARAMETRES
+ * array        Le tableau à trier
  * p            array[p..q-p+1], p <= q < length
  * q            array[q+1..length-q+1],
- * length       Number of elements in the array (pre-condition: 0 <= length)
+ * length       Nombres d'éléments du tableau (0 <= length)
  * ------------------------------------------------------------------------- */
 static void Merge(int* array, size_t p, size_t q, size_t length);
 
 static void Merge(int* array, size_t p, size_t q, size_t length){
-  assert(p <= q && q < length); // no empty array
+  assert(p <= q && q < length); // On ne peut pas avoir de tableau vide
   assert(length >= 0);
 
   size_t n1 = q - p + 1;
   size_t n2 = length - q;
-  int *L = malloc(sizeof(int) *(n1+1)); // the (n1+1)th is use for the biggest int
+  int *L = malloc(sizeof(int) *(n1+1)); // la dernière case du tableau est réservé pour le dernier entier possible
   if(L == NULL)
     return;
 
-  int *R = malloc(sizeof(int) *(n2+1)); // the (n2+1)th is use for the biggest int
+  int *R = malloc(sizeof(int) *(n2+1)); // la dernière case du tableau est réservé pour le dernier entier possible
   if(R == NULL)
     return;
 
-  for(size_t i = 0; i < n1; i++) // copping a part of the array like L[] = array[p..p+n1]
+  for(size_t i = 0; i < n1; i++) // copie une partie du tableau tel que : L[] = array[p..p+n1]
     L[i] = array[p+i];
 
-  for(size_t j = 0; j < n2; j++) // copping a part of the array like R[] = array[q+1..q+n2+1]
+  for(size_t j = 0; j < n2; j++) // copie une partie du tableau tel que : R[] = array[q+1..q+n2+1]
     R[j] = array[q+j+1];
 
-  L[n1] = INT_MAX; // because nothings is > than INT_MAX
-  R[n2] = INT_MAX; // because nothings is > than INT_MAX
+  L[n1] = INT_MAX; // Parce que rien n'est plus grand que INT_MAX
+  R[n2] = INT_MAX;
 
   int i = 0;
   int j = 0;
 
-  for(unsigned long k = p; k <= length; k++){ // Merging
+  for(unsigned long k = p; k <= length; k++){ // Fusion
     if(L[i] <= R[j]){
       array[k] = L[i];
       i++;
@@ -77,15 +77,17 @@ static void MergeSort(int* array, size_t p, size_t length){
   assert(length >= 0);
 
   if(p < length){
-    size_t q = (length+p)/2; // splits the array in two
+    size_t q = (length+p)/2; // Scinde le tableau en deux
     MergeSort(array, p, q);
     MergeSort(array, q+1, length);
 
-    Merge(array, p, q, length); // Merge 2 under array already sorted, such that array[p..q] is sorted as well as array[q+1..length], and Merge returns a sorted array up to index length ( array[0..length] )
+    Merge(array, p, q, length); // Fusionne deux sous tableaux déjà trié
   }
 }
 
 void sort(int* array, size_t length){
-  MergeSort(array, 0, length-1); //array[0..length-1]
+  if(array == NULL)
+    return;
 
+  MergeSort(array, 0, length-1); //array[0..length-1]
   }

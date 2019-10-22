@@ -9,11 +9,11 @@
 
 
 /* ------------------------------------------------------------------------- *
- * Sort an array of integers.
+ * Trie un tableau d'entier.
  *
- * PARAMETERS
- * array        The array to sort
- * length       Number of elements in the array
+ * PARAMETRES
+ * array        Le tableau à trier
+ * length       Nombres d'éléments du tableau
  * ------------------------------------------------------------------------- */
 void sort(int* array, size_t length);
 

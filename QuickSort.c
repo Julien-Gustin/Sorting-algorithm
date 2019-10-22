@@ -1,6 +1,6 @@
 /* ========================================================================= *
  * QuickSort
- * Implementation of the Quick algorithm.
+ * Implémentation de l'algorithme QuickSort.
  * ========================================================================= */
 
 #include <stddef.h>
@@ -10,33 +10,33 @@
 #include "Sort.h"
 
 /* ------------------------------------------------------------------------- *
- * Sort an array of integers.
+ * Trie un tableau d'entier.
  *
- * PARAMETERS
- * array        The array to sort
+ * PARAMETRES
+ * array        Le tableau à trier
  * p
  * r
  * ------------------------------------------------------------------------- */
 static void QuickSort(int *array, int p, int r);
 /* ------------------------------------------------------------------------- *
- * Swap all the elements <= pivot, to the begging of the under array
+ * Déplace tout les éléments plus petit ou égale au pivot, au début du sous tableau
  *
- * PARAMETERS
- * array        array of integers
- * p            Index
- * Ipivot       Is the indice of the pivot
+ * PARAMETRES
+ * array        Tableau d'entier
+ * p            Indice
+ * Ipivot       L'indice du pivot
  *
- * RETURN
- * i+1          index of the last element
+ * RETOURNE
+ * i+1          Indice du dernier éléments
  * ------------------------------------------------------------------------- */
 static int partition(int *array, int p, size_t Ipivot);
 /* ------------------------------------------------------------------------- *
- * Swap the element of array[i] with array[j], array[i] <=> array[j]
+ * Echange les éléments du tableau array[i] avec array[j] tel que, array[i] <=> array[j]
  *
- * PARAMETERS
- * array        array of integers
- * i            Index of the first element
- * j            Index of the seconds element
+ * PARAMETRES
+ * array        Tableau d'entier
+ * i            Indice du premier éléments
+ * j            Indice du second éléments
  * ------------------------------------------------------------------------- */
 static void swap(int *array, size_t i, size_t j);
 
@@ -48,14 +48,14 @@ static void swap(int *array, size_t i, size_t j){
 static int partition(int *array, int p, size_t Ipivot){
   int pivot = array[Ipivot];
   size_t i = p-1;
-  for(size_t j = p; j < Ipivot; j++){ // all the elements <= of the pivot are placed at the beginning of the under-array;
+  for(size_t j = p; j < Ipivot; j++){ // Tout les éléments <= au pivot sont placés au début du sous tableau
     if(array[j] <= pivot){
       i++;
       swap(array, i, j);
     }
   }
 
-  swap(array, i+1, Ipivot); // the pivot is swapped to the end of the swapped elements.
+  swap(array, i+1, Ipivot); // On swap le pivot avec le dernier élément swapé
   return i+1;
 }
 
@@ -68,7 +68,8 @@ static void QuickSort(int *array, int p, int r){
 }
 
 void sort(int* array, size_t length){
+  if(array == NULL)
+    return;
 
   QuickSort(array, 0, length-1);
-
   }
