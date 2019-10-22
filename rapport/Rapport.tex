@@ -126,7 +126,7 @@ $A[1..i]$ contient les $i$ premiers éléments de $A$ triés, le sous tableau \i
 \Procname{$\proc{New-Sort}(A)$}
 \li $i \gets 1$
 
-\li \For $j \gets 2$ \To $\attrib{A}{length}$
+\li \For $j \gets 2$ \To $\attrib{A}{length}$ \color{Gray} //Parcours le tableau dans son entièreté
 \Do
 
 \li \While $A[j] \leq A[j+1]$ and $j < \attrib{A}{length}$
@@ -154,7 +154,7 @@ La complexité en temps, dans le meilleur des cas, est $\Theta(n)$ ( si le table
 voir PseudoCode~\ref{PseudoCode}
 \End
 \end{codebox} }
-, les valeurs égales n'interchangent pas de place et sont considérée comme déjà triée, de plus la fonction utilisée "\textit{Merge}" étant aussi stable nous pouvons en conclure que \textbf{NewSort} est stable. 
+, les valeurs égales n'interchangent pas de place et sont considérée comme déjà triée, de plus vu que la fonction "\textit{Merge}" est stable nous pouvons en conclure que \textbf{NewSort} est lui aussi stable. 
 
 
 \subsection{Complexité au pire des cas}
@@ -186,13 +186,12 @@ $10^{6}$ & 768,522644    & 2.639571  & 0,353273         & 0,179450          & 14
 \end{tabular}
 \end{table}
 
-L'\textbf{InsertionSort} et le \textbf{NewSort} sont les tris les plus lents des cinq, en effet avec leurs complexités moyennes de $\Theta(n^{2})$, ces tris prennent un temps quadratique pour un tableau de taille 'n', cette complexité "élevée" découle du fait que, contrairement aux QuickSort, MergeSort ou HeapSort, ces tris requièrent (pour l'\textbf{InsertionSort}) de parcourir le tableau plusieurs fois pour insérer une valeur à sa bonne place et pour le \textbf{MergeSort}, de trié deux sous tableaux dont le premier commence de la première case jusqu'à la dernière précédemment triée, et le deuxième, de la case qui suit le premier sous tableau jusqu'à la dernière case où la suivante  n'est pas triée par ordre croissant, et ainsi la fusion de ces deux sous-tableaux pré-triés crée un tableau trié.
- Parcourir plusieurs fois le tableau mène à une complexité de $\Theta(n^{2})$.
-\\
-\\
-\indent L'algorithme qui suit est de type "diviser pour régner" ( découper le problème initial en sous problèmes, résoudre ceux ci permettent de résoudre le problème initial ), sa complexité moyenne est $\Theta(n$ $log$ $n$), cependant, la lenteur de \textbf{QuickSort} comparé à MergeSort et HeapSort est dû, au pire des cas, à sa complexité quadratique, il procède ainsi par une méthode qui s'appelle "partition" et qui consiste à choisir un pivot que nous plaçons à la fin du sous tableau. Les éléments inférieurs à celui ci sont insérés au début de ce sous tableau, ensuite ce pivot est placé à la fin des éléments déplacés, cette méthode permet de trier le tableau rapidement, cependant, si le tableau est déjà trié en entrée, ce tri n'est pas vraiment efficace.\\ 
 
-Les deux prochains algorithmes, \textbf{HeapSort} et \textbf{MergeSort}, sont tous deux extrêmement rapides avec une complexité, que ce soit dans le pire ou le meilleur des cas de $\Theta(n$ $log$ $n$),  qui est asymptotiquement optimale. Le \textbf{MergeSort} est de type "diviser pour régner", cet algorithme fonctionne par le principe que, à partir de deux tableaux triés, nous pouvons former un tableau triés, ainsi par récursivité, nous créons des sous-tableaux de plus en plus petits jusqu'à ce que le tableau ne contienne plus qu'un seul élément et par la remontée récursive, nous fusionnons ces tableaux qui deviennent de plus en plus grands à chaque remontée jusqu'à ce que le tableau soit complètement trié.\\ Le \textbf{HeapSort} fonctionne par arbre binaire. \\
+L'\textbf{InsertionSort} et le \textbf{NewSort} sont les tris les plus lents des cinq, en effet avec leurs complexités moyennes de $\Theta(n^{2})$, ces tris prennent un temps quadratique pour un tableau de taille 'n', cette complexité "élevée" découle du fait que, contrairement aux QuickSort, MergeSort ou HeapSort, ces tris requièrent de parcourir le tableau plusieurs fois afin d'y insérer une valeur à sa bonne place que ce soit par fusion ou insertion. 
+\\ \\
+\indent L'algorithme qui suit est de type "diviser pour régner" ( découper le problème initial en sous problèmes, résoudre ceux ci permettent de résoudre le problème initial ), sa complexité moyenne est $\Theta(n$ $log$ $n$), cependant, la lenteur de \textbf{QuickSort} comparé à MergeSort et HeapSort est dû, aux pires de ses cas, avoir des valeurs trié par ordre croissante ou décroissante, le mène à avoir une complexité quadratique. Il procède ainsi par une méthode qui s'appelle "partition" et qui consiste à choisir un pivot que nous plaçons à la fin du sous tableau. Les éléments inférieurs à celui ci sont insérés au début de ce sous tableau, ensuite ce pivot est placé à la fin des éléments déplacés, cette méthode permet de trier le tableau rapidement, cependant, si le tableau est déjà trié en entrée, ce tri n'est pas vraiment efficace.\\ 
+
+Les deux prochains algorithmes, \textbf{HeapSort} et \textbf{MergeSort}, sont tous deux extrêmement rapides avec une complexité, que ce soit dans le pire ou le meilleur des cas de $\Theta(n$ $log$ $n$),  qui est asymptotiquement optimale. Le \textbf{MergeSort} est de type "diviser pour régner", cet algorithme fonctionne par le principe que, à partir de deux tableaux triés, nous pouvons former un tableau triés, ainsi par récursivité, nous créons des sous-tableaux de plus en plus petits jusqu'à ce que le tableau ne contienne plus qu'un seul élément et par la remontée récursive, nous fusionnons ces tableaux qui deviennent de plus en plus grands à chaque remontée jusqu'à ce que le tableau soit complètement trié.\\ Le \textbf{HeapSort} fonctionne par arbre binaire. ( L'absence de "pire cas" le rend "puissant" cependant dans des cas où la plage de nombres est plus élevé \textbf{QuickSort} est souvent préféré. ) \\
 Ce qui crée la légère différence en temps entre ces deux tris est la stabilité, en effet, le HeapSort ne préserve pas nécessairement l’ordre des éléments à valeurs identiques contrairement au MergeSort qui gagne ainsi en rapidité.
 
 \begin{table}[htb]
@@ -221,7 +220,7 @@ k    & InsertionSort & QuickSort & HeapSort & MergeSort & NewSort \\ \hline
 5000 & 0,030251              & 0,047346          & 0,002043         & 0,001124          & 0,058827       
 \end{tabular}
 \end{table}
-Nous pouvons voir que pour un tableau pré-trié ( k = 1 ) \textbf{InsertionSort} et le \textbf{NewSort} sont les plus rapides, en effet pour ces deux tris un tableau pré-trié est leur meilleur cas, cependant en pratique ce sont les plus lents en effet avoir un tableau déjà trié en entrée est quelque choses de très très rare, et en comparant les valeurs de ces deux tris avec les trois autres nous remarquons que pour des cas plus probable ils sont moins efficace... \\ \\
+Nous pouvons voir que pour un tableau pré-trié ( k = 1 ) \textbf{InsertionSort} et le \textbf{NewSort} sont les plus rapides, en effet pour ces deux tris, un tableau pré-trié est leur meilleur cas, cependant en pratique ce sont les plus lents en effet avoir un tableau déjà trié en entrée est quelque choses de très très rare et de plus inutile, et en comparant les valeurs de ces deux tris avec les trois autres nous remarquons que pour des cas plus probable ils sont moins efficace... \\ \\
 Le \textbf{QuickSort} est un algorithme très efficace si l'intervalle de rapport est plus élevé en effet vu que ce tri n'est pas stable avoir plusieurs valeur les mêmes l'un à coté de l'autre lui complique la tache, de plus ses pires cas sont d'avoir comme pivot soit la valeur la plus petite soit la plus grande, autrement dit avoir un tableau trié par ordre croissant ou décroissant c'est pour cela que le quicksort atteint son efficacité maximum entre 'k' = 100 et 'k' = 1000 ( plus rapide que les 4 autres ), et au contraire est très peu efficace en 'k' = 1 ou 5000\\
 \\
 Le \textbf{HeapSort} et \textbf{MergeSort} sont tout les deux très rapides et constants, c'est ce qu'ils font leurs force, ils n'ont pas de meilleur ou pire cas cependant vu que le HeapSort n'est pas stable, pour un tableau qui contient des répétitions il est préférable de choisir le \textbf{MergeSort}.

@@ -15,7 +15,7 @@
  * PARAMETRES
  * array        Le tableau à trier
  * p            l'indice du premier élément du tableau
- * length       Nombres d'éléments du tableau ( length >= 0 )
+ * length       Nombres d'éléments du tableau
  * ------------------------------------------------------------------------- */
 static void MergeSort(int* array, size_t p, size_t length);
 
@@ -34,7 +34,7 @@ static void Merge(int* array, size_t p, size_t q, size_t length);
 
 static void Merge(int* array, size_t p, size_t q, size_t length){
   assert(p <= q && q < length); // On ne peut pas avoir de tableau vide
-  assert(length >= 0);
+  assert(length > 0);
 
   size_t n1 = q - p + 1;
   size_t n2 = length - q;
@@ -74,7 +74,6 @@ static void Merge(int* array, size_t p, size_t q, size_t length){
 }
 
 static void MergeSort(int* array, size_t p, size_t length){
-  assert(length >= 0);
 
   if(p < length){
     size_t q = (length+p)/2; // Scinde le tableau en deux

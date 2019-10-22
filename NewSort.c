@@ -33,7 +33,7 @@ static void NewSort(int* array, size_t length);
 
 static void Merge(int* array, size_t p, size_t q, size_t length){
   assert(p <= q && q < length); // On ne peut pas avoir de tableau vide
-  assert(length >= 0);
+  assert(length > 0);
 
   size_t n1 = q - p + 1;
   size_t n2 = length - q;

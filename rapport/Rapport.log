@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.3.23)  22 OCT 2019 12:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.3.23)  22 OCT 2019 13:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -559,27 +559,27 @@ Package pdftex.def Info: graphique.png  used on input line 145.
 (pdftex.def)             Requested size: 349.90996pt x 216.20941pt.
 Warning: Indentation ends at level -1 in codebox on page 2.
 [2 <./graphique.png>] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 189--194
+Underfull \hbox (badness 10000) in paragraph at lines 190--193
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 189--194
+Underfull \hbox (badness 10000) in paragraph at lines 190--193
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 224--230
+Underfull \hbox (badness 10000) in paragraph at lines 223--229
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 224--230
+Underfull \hbox (badness 10000) in paragraph at lines 223--229
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 224--230
+Underfull \hbox (badness 10000) in paragraph at lines 223--229
 
  []
 
@@ -602,11 +602,11 @@ Package minitoc(hints) Warning: W0024
 Here is how much of TeX's memory you used:
  8739 strings out of 492641
  119239 string characters out of 6131787
- 242804 words of memory out of 5000000
+ 244804 words of memory out of 5000000
  12240 multiletter control sequences out of 15000+600000
  29401 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,11n,49p,862b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,11n,49p,978b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc
 }</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/
@@ -627,7 +627,7 @@ r/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb></usr
 /share/texmf/fonts/type1/public/cm-super/sfss1200.pfb></usr/share/texmf/fonts/t
 ype1/public/cm-super/sfss1440.pfb></usr/share/texmf/fonts/type1/public/cm-super
 /sfti1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfxc1095.pfb>
-Output written on Rapport.pdf (5 pages, 300400 bytes).
+Output written on Rapport.pdf (5 pages, 300335 bytes).
 PDF statistics:
  116 PDF objects out of 1000 (max. 8388607)
  83 compressed objects within 1 object stream
