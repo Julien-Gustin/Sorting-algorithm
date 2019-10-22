@@ -1,6 +1,6 @@
 /* ========================================================================= *
  * HeapSort
- * Implementation of the HeapSort algorithm.
+ * Implémentation ode l'algorithme HeapSort.
  * ========================================================================= */
 
 #include <stddef.h>
