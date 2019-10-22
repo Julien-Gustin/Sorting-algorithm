@@ -114,5 +114,7 @@ static void HeapSort(int *array, size_t length){
 }
 
 void sort(int* array, size_t length){
+  if(array == NULL || length == 0)
+    return;
   HeapSort(array, length-1);
 }

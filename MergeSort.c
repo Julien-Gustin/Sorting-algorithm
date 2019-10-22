@@ -85,7 +85,7 @@ static void MergeSort(int* array, size_t p, size_t length){
 }
 
 void sort(int* array, size_t length){
-  if(array == NULL)
+  if(array == NULL || length == 0)
     return;
 
   MergeSort(array, 0, length-1); //array[0..length-1]

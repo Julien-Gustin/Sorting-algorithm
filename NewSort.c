@@ -76,7 +76,7 @@ static void NewSort(int* array, size_t length){
   size_t i = 0;
 
   for(size_t j = 1; j < length; j++){ // Se déplace dans le tableau jusqu'à la dernière case
-      while(array[j] <= array[j+1] && j < length-1) // 'j' est l'indice de la dernière case où array[i+1...j] est trié par ordre croissant
+      while(j < length-1 && array[j] <= array[j+1]) // 'j' est l'indice de la dernière case où array[i+1...j] est trié par ordre croissant
         j++;
 
       Merge(array, 0, i, j); // Fusionne 2 sous tableau déja trié pour que la fusion des deux soit lui aussi triée
