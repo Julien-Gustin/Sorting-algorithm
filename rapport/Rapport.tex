@@ -141,7 +141,9 @@ $j \gets j + 1$  \color{Gray} //Permet de trouver le prochain indice 'j' du tabl
 \end{codebox}
 
 \subsection{Complexité}
-La complexité en temps, dans le meilleur des cas, est $\Theta(n)$ ( si le tableau est pré-trié par ordre croissant ) et dans le pire des cas $\Theta(n^{2})$ ( si le tableau est pré-trié dans un ordre décroissant ) , où 'n' est la taille du tableau ( array ). En effet, si les valeurs sont triées par ordre croissant, nous itérons la boucle principale qu'une seule fois ainsi \textit{Merge} ( d'une complexité de $\Theta(n)$ ) est appelé lui aussi une seule fois, au contraire si  les valeurs sont triées par ordre décroissant \textit{Merge} sera appelé 'n' fois parce que il n'existera aucun sous tableau trié, de taille plus grand que un, ainsi la boucle principale itéra 'n' fois.     
+La complexité en temps, dans le meilleur des cas, est $\Theta(n)$ ( si le tableau est pré-trié par ordre croissant ) et dans le pire des cas $\Theta(n^{2})$ ( si le tableau est pré-trié dans un ordre décroissant ) , où 'n' est la taille du tableau ( array ). En effet, si les valeurs sont triées par ordre croissant, nous itérons la boucle principale qu'une seule fois ainsi \textit{Merge} ( d'une complexité de $O(n)$ ) est appelé lui aussi une seule fois, au contraire si  les valeurs sont triées par ordre décroissant \textit{Merge} sera appelé 'n' fois parce que il n'existera aucun sous tableau trié, de taille plus grand que un, ainsi la boucle principale itéra 'n' fois.   \\ 
+\textbf{Preuve :}\\ $T(n) \leq \sum_{i = 1}^{n} i$ \\ \indent Puisque \indent$\sum_{i = 1}^{n} i = \frac{n(n+1)}{2} \\ \indent$ On obtient $T(n) \leq \frac{n(n+1)}{2}$ \\
+\indent ainsi nous obtenons $T(n) = O(n^{2})$ puisque nous bornons supérieurement
 
 \includegraphics[scale=0.6]{graphique.png} \\
 ( Graphique testé avec des valeurs réelles, où O(n) correspond à un tableau pré-trié et O(n$^{2}$), pré-trié dans un ordre décroissant ) 
@@ -159,13 +161,18 @@ voir PseudoCode~\ref{PseudoCode}
 
 
 \subsection{Complexité au pire des cas}
-Pour un tableau de taille 'n' constitué de $k(\leq n$) blocs pré-triés de taille identique nous avons une complexité ( au pire des cas ) de $\Theta(k*n)$, en effet, si k = n nous avons une complexité de $\Theta(n^{2})$ et d'un autre coté si k = 1 nous avons $\Theta(n)$, respectivement nous avons bien le meilleur et le pire des cas décrit ci-dessus. Cela vient du fait que "\textit{Merge}" a une complexité de $\Theta(n)$ qui est appelée au maximum \footnote{Deux blocs pré-trié différents peuvent très bien être trié entre eux ainsi ne forme qu'un et même seul bloc trié} 'k' fois vu que la boucle\footnote{\begin{codebox}
+Pour un tableau de taille 'n' constitué de $k(\leq n$) blocs pré-triés de taille identique nous avons une complexité ( au pire des cas ) de $\Theta(k \cdot n)$, en effet, si k = n nous avons une complexité de $\Theta(n^{2})$ et d'un autre coté si k = 1 nous avons $\Theta(n)$, respectivement nous avons bien le meilleur et le pire des cas décrit ci-dessus. Cela vient du fait que "\textit{Merge}" a une complexité de $O(n)$ qui est appelée au maximum \footnote{Deux blocs pré-trié différents peuvent très bien être trié entre eux ainsi ne forme qu'un et même seul bloc trié} 'k' fois vu que la boucle\footnote{\begin{codebox}
 \li \While $A[j] \leq A[j+1]$ and $j < \attrib{A}{length}$
 \li \Do
 $j \gets j + 1$
+
 \End
 \end{codebox} }
-secondaire permet de trouver l'indice du tableau auquel sa valeur à l'indice suivant est plus petit. Ainsi nous savons bien que dans le pire des cas \textit{Merge} est appelé 'k' fois.
+secondaire permet de trouver l'indice du tableau auquel sa valeur à l'indice suivant est plus petit. Ainsi nous savons bien que dans le pire des cas \textit{Merge} est appelé 'k' fois. \\ \\
+\textbf{Preuve :}
+$\sum_{i = 1}^{k} i \cdot \frac{n}{k}$ $<=>$ $\frac{n}{k}\sum_{i = 1}^{k} i$ \\ 
+\indent Puisque \indent$\sum_{i = 1}^{k} i = \frac{k(k+1)}{2}$ \\
+\indent Nous avons : \indent $\frac{n}{k} \cdot \frac{k(k+1)}{2}$ $<=>$ $ \frac{n(k+1)}{2}$ \\ Nous bornons $T(n)$ et ainsi $T(n) = O(n \cdot k)$
 
 \newpage
 
@@ -190,7 +197,7 @@ $10^{6}$ & 768,522644    & 2.639571  & 0,353273         & 0,179450          & 14
 
 L'\textbf{InsertionSort} et le \textbf{NewSort} sont les tris les plus lents des cinq, en effet avec leurs complexités moyennes de $\Theta(n^{2})$, ces tris prennent un temps quadratique pour un tableau de taille 'n', cette complexité "élevée" découle du fait que, contrairement aux QuickSort, MergeSort ou HeapSort, ces tris requièrent de parcourir le tableau plusieurs fois afin d'y insérer une valeur à sa bonne place que ce soit par fusion ou insertion. 
 \\ \\
-\indent L'algorithme qui suit est de type "diviser pour régner" ( découper le problème initial en sous problèmes, résoudre ceux ci permet de résoudre le problème initial ), sa complexité moyenne est $\Theta(n$ $log$ $n$), cependant, la lenteur de \textbf{QuickSort} comparé à MergeSort et HeapSort est dû, aux pires de ses cas, avoir des valeurs triées par ordre croissant ou décroissant, le mène à avoir une complexité quadratique. Il procède ainsi par une méthode qui s'appelle "partition" et qui consiste à choisir un pivot que nous plaçons à la fin du sous tableau. Les éléments inférieurs à celui-ci sont insérés au début de ce sous tableau, ensuite ce pivot est placé à la fin des éléments déplacés, cette méthode permet de trier le tableau rapidement, cependant, si le tableau est déjà trié en entrée, ce tri n'est pas vraiment efficace.\\ 
+\indent L'algorithme qui suit, \textbf{QuickSort} est de type "diviser pour régner" ( découper le problème initial en sous problèmes, résoudre ceux ci permet de résoudre le problème initial ), sa complexité moyenne est $\Theta(n$ $log$ $n$), cependant, sa lenteur  comparé à \textbf{MergeSort} et \textbf{HeapSort} est dû, aux pires de ses cas, avoir des valeurs triées par ordre croissant ou décroissant, le mène à avoir une complexité quadratique. Il procède ainsi par une méthode qui s'appelle "partition" et qui consiste à choisir un pivot que nous plaçons à la fin du sous tableau. Les éléments inférieurs à celui-ci sont insérés au début de ce sous tableau, ensuite ce pivot est placé à la fin des éléments déplacés, cette méthode permet de trier le tableau rapidement, cependant, si le tableau est déjà trié en entrée, ce tri n'est pas vraiment efficace.\\ 
 
 Les deux prochains algorithmes, \textbf{HeapSort} et \textbf{MergeSort}, sont tous deux extrêmement rapides avec une complexité, que ce soit dans le pire ou le meilleur des cas de $\Theta(n$ $log$ $n$),  qui est asymptotiquement optimale. Le \textbf{MergeSort} est de type "diviser pour régner", cet algorithme fonctionne par le principe que, à partir de deux tableaux triés, nous pouvons former un tableau trié, ainsi par récursivité, nous créons des sous-tableaux de plus en plus petits jusqu'à ce que le tableau ne contienne plus qu'un seul élément et par la remontée récursive, nous fusionnons ces tableaux qui deviennent de plus en plus grands à chaque remontée jusqu'à ce que le tableau soit complètement trié.\\ Le \textbf{HeapSort} fonctionne par arbre binaire. ( L'absence de "pire cas" le rend "puissant" cependant dans des cas où la plage de nombres est plus élevées \textbf{QuickSort} est souvent préféré. ) \\
 Ce qui crée la légère différence en temps entre ces deux tris est la stabilité. En effet, le HeapSort ne préserve pas nécessairement l’ordre des éléments à valeurs identiques contrairement au MergeSort qui gagne ainsi en rapidité.

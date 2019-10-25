@@ -96,6 +96,11 @@ int main(int argc, char** argv)
     const double sec = cpuTimeUsedToSort(array, sizeArray);
     printf("\nCPU Time: %f\n", sec);
 
+    for(int i = 0; i < sizeArray-1; i++){
+      if(array[i] > array[i+1])
+        printf("ERREUR");
+    }
+
     free(array);
 
     return 0;
